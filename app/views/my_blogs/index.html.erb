@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<p class="text-white bg-dark" style="font-size:1.5vw; text-align:center; padding:.2vw 0vw .5vw 0vw; height:3vw;">My Blogs</p>
+
+<table class="table" style="text-align:center;">
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Topics</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_blogs.each do |my_blog| %>
+      <tr>
+        <td><%= my_blog.author %></td>
+        <td><%= my_blog.title %></td>
+        <td><%= my_blog.description %></td>
+        <td><%= my_blog.topics %></td>
+        <td><%= link_to 'Show', my_blog %></td>
+        <td><%= link_to 'Edit', edit_my_blog_path(my_blog) %></td>
+        <td><%= link_to 'Destroy', my_blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="d-grid gap-2 d-md-block" style="text-align:center;"><%= link_to 'Create New Blog', new_my_blog_path %></div>
