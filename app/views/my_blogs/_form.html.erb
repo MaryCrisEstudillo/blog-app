@@ -10,28 +10,27 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :author %>
-    <%= form.text_field :author %>
+<div style="margin: 0vw 40vw 0vw 37vw; padding:3vw; width:25vw; height:30vw;"> 
+  <div class="row mb-3" style="height:2vw; border-radius:.7vw; box-shadow: .3vw -.3vw .5vw -.3vw rgba(0, 0, 0, 0.363);" >
+    <%= form.text_field :author, style:"text-align:center; background-color:white; border:none; border-radius:.7vw; outline:none;", :placeholder => "Author"%>
   </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="row mb-3" style="height:2vw; border-radius:.7vw;  box-shadow: .3vw -.3vw .5vw -.3vw rgba(0, 0, 0, 0.363);">
+    <%= form.text_field :title, style:"text-align:center; border-radius:.7vw; font-size:.8vw; border: none; outline:none;", :placeholder => "Title"%>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div class="row mb-3" style="height:2vw; border-radius:.7vw;  box-shadow: .3vw -.3vw .5vw -.3vw rgba(0, 0, 0, 0.363);">
+    <%= form.text_field :topics, style:"text-align:center; border-radius:.7vw; font-size:.8vw; border: none; outline:none;", :placeholder => "Topics" %>
   </div>
 
-  <div class="field">
-    <%= form.label :topics %>
-    <%= form.text_area :topics %>
+  <div class="row mb-3" style="height:10vw; border-radius:.7vw;  box-shadow: .3vw -.3vw .5vw -.3vw rgba(0, 0, 0, 0.363);">
+    <%= form.text_area :description, style:"text-align:center; border-radius:.7vw; padding-top:.5vw; font-size:.8vw; border:none; outline:none;", :placeholder => "Description" %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <br>
+  <div style="margin:0vw 0vw 0vw 6vw;">
+    <%= form.submit :Submit, class:"text-white", style:"border-radius:.5vw; background-color: rgb(0, 0, 0); border: none; width: 3.9vw; height:2vw; outline:none;" %>
   </div>
 <% end %>
+<br>
+<%= link_to 'Back', my_blogs_path, class:"btn btn-secondary", style:"margin:-5.9vw 0vw 0vw 11vw; width:3.9vw; border-radius:.5vw; "%>
+</div>

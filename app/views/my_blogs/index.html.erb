@@ -1,6 +1,8 @@
-<p id="notice"><%= notice %></p>
-<p class="text-white bg-dark" style="font-size:1.5vw; text-align:center; padding:.2vw 0vw .5vw 0vw; height:3vw;">My Blogs</p>
-
+<p id="notice" style="text-align:center; color:red; padding:1vw 0vw 2vw 0vw;"><%= notice %></p>
+<p class="text-white bg-dark" style=" margin-top:-2vw;font-size:1.5vw; text-align:center; padding:.2vw 0vw .5vw 0vw; height:3vw;">My Blogs List</p>
+<br>
+<div style= "margin: 0vw 6vw 0vw 6vw; border-radius:1.5vw; box-shadow: 0vw -.2vw .5vw -.2vw rgba(0, 0, 0, 0.363);">
+<br>
 <table class="table" style="text-align:center;">
   <thead>
     <tr>
@@ -17,16 +19,19 @@
       <tr>
         <td><%= my_blog.author %></td>
         <td><%= my_blog.title %></td>
-        <td><%= my_blog.description %></td>
+        <td style="width:18vw; text-align:left"><%= my_blog.description%></td>
         <td><%= my_blog.topics %></td>
-        <td><%= link_to 'Show', my_blog %></td>
-        <td><%= link_to 'Edit', edit_my_blog_path(my_blog) %></td>
-        <td><%= link_to 'Destroy', my_blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', my_blog, class:"btn btn-secondary", style: "border-radius:.5vw;" %></td>
+        <td><%= link_to 'Edit', edit_my_blog_path(my_blog), class:"btn btn-secondary", style: "border-radius:.5vw;" %></td>
+        <td><%= link_to 'Destroy', my_blog, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger", style: "border-radius:.5vw;" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<div class="d-grid gap-2 d-md-block" style="text-align:center;"><%= link_to 'Create New Blog', new_my_blog_path %></div>
+<div style="margin:0vw 0vw 0vw 40vw;">
+<%= link_to 'Create New Blog', new_my_blog_path, class:"text-white btn btn-dark", style:"border-radius:.5vw;" %>
+</div>
+<br>
+</div>
