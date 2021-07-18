@@ -23,7 +23,7 @@
         <td><%= my_blog.topics %></td>
         <td><%= link_to 'Show', my_blog, class:"btn btn-secondary", style: "border-radius:.5vw;" %></td>
         <td><%= link_to 'Edit', edit_my_blog_path(my_blog), class:"btn btn-secondary", style: "border-radius:.5vw;" %></td>
-        <td><%= link_to 'Destroy', my_blog, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger", style: "border-radius:.5vw;" %></td>
+        <td><%= link_to 'Delete', my_blog, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger", style: "border-radius:.5vw;" %></td>
       </tr>
     <% end %>
   </tbody>
